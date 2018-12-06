@@ -1,5 +1,5 @@
 ---
-title: "Video: Hello Processing! (Engelsk)"
-level: 1
-external: http://hello.processing.org/
+title: "Video: Hello Processing!"
+language: en
+external: "http://hello.processing.org/"
 ---

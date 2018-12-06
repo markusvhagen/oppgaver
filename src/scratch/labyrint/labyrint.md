@@ -1,8 +1,10 @@
 ---
 title: Labyrint
 level: 1
-author: Geir Arne Hjelle
+author: 'Geir Arne Hjelle'
+language: nb
 ---
+
 
 # Introduksjon {.intro}
 
@@ -11,7 +13,8 @@ etter skatten gjemt inne i labyrinten. Dessverre er skatten beskyttet
 av den skumle froskekongen. Vi vil lære hvordan vi kontrollerer
 figurer, og hvordan vi kan programmere figurer til å bevege seg selv.
 
-![](labyrint.png)
+![Bilde av labyrinten, froskekongen, utforskeren og skatten](labyrint.png)
+
 
 # Steg 1: Hvordan styre figurer med piltastene {.activity}
 
@@ -22,21 +25,21 @@ figurer, og hvordan vi kan programmere figurer til å bevege seg selv.
 
 ## Sjekkliste {.check}
 
-+ Start et nytt prosjekt.
+- [ ] Start et nytt prosjekt.
 
-+ Slett kattefiguren ved å høyreklikke på den og velge `slett`.
+- [ ] Slett kattefiguren ved å høyreklikke på den og velge `slett`.
 
-+ Legg til en ny figur. Klikk på
+- [ ] Legg til en ny figur. Klikk på
   ![Velg figur fra biblioteket](../bilder/hent-fra-bibliotek.png)-knappen
   og velg en figur du har lyst til å styre rundt. Vi har brukt
   `Dyr/Beetle`-figuren.
 
-+ Gi den nye figuren navnet `Utforsker` ved å klikke på `i`{.blockmotion}.
+- [ ] Gi den nye figuren navnet `Utforsker` ved å klikke på `i`{.blockmotion}.
 
 Vi begynner med å la figuren bevege seg oppover skjermen når vi
 trykker på `pil opp`-tasten.
 
-+ Legg til følgende skript på `Utforsker`-figuren din.
+- [ ] Legg til følgende skript på `Utforsker`-figuren din.
 
   ```blocks
   når [pil opp v] trykkes
@@ -48,7 +51,7 @@ trykker på `pil opp`-tasten.
   oppover skjermen? Nå må vi lage lignende skript for de andre
   tastene.
 
-+ Legg også til disse skriptene, slik at `Utforsker` har totalt fire
+- [ ] Legg også til disse skriptene, slik at `Utforsker` har totalt fire
   skript, ett for hver tast.
 
   ```blocks
@@ -69,9 +72,9 @@ trykker på `pil opp`-tasten.
 
 __Klikk på det grønne flagget.__
 
-+ Beveger utforskeren din seg rundt slik du hadde forventet?
+- [ ] Beveger utforskeren din seg rundt slik du hadde forventet?
 
-+ Kan du forandre hvor raskt utforskeren flytter seg?
+- [ ] Kan du forandre hvor raskt utforskeren flytter seg?
 
 Tallet `5` i `gå (5) steg`{.b}-klossene bestemmer hvor raskt
 utforskeren flytter seg rundt. Vi vil gjerne eksperimentere litt for å
@@ -83,20 +86,20 @@ må vi bytte tallet i fire forskjellige skript. Det blir for mye jobb!
 Vi vil i stedet bruke en __variabel__ som kan styre farten til
 `Utforsker`-figuren.
 
-+ Lag en ny variabel ved å gå til `Data`{.blockdata}-kategorien og
+- [ ] Lag en ny variabel ved å gå til `Data`{.blockdata}-kategorien og
   klikk `Lag en Variabel`.
 
-+ Kall variabelen `hastighet`, og velg at den bare skal gjelde `For
+- [ ] Kall variabelen `hastighet`, og velg at den bare skal gjelde `For
   denne figuren`.
 
-+ Til slutt, fjern avhukingen ved siden av den nye
+- [ ] Til slutt, fjern avhukingen ved siden av den nye
   `(hastighet)`{.b}-klossen for at variabelen ikke skal vises på
   scenen.
 
 Nå må vi endre i skriptene våre slik at bruker
 `(hastighet)`{.b}-variabelen.
 
-+ Lag først et nytt skript som setter verdien av `(hastighet)`{.b} til
+- [ ] Lag først et nytt skript som setter verdien av `(hastighet)`{.b} til
   `10`.
 
   ```blocks
@@ -104,7 +107,7 @@ Nå må vi endre i skriptene våre slik at bruker
   sett [hastighet v] til [10]
   ```
 
-+ Deretter endrer vi de fire skriptene vi allerede har laget slik at
+- [ ] Deretter endrer vi de fire skriptene vi allerede har laget slik at
   de bruker `(hastighet)`{.b}.
 
   ```blocks
@@ -129,13 +132,14 @@ Nå må vi endre i skriptene våre slik at bruker
 
 __Klikk på det grønne flagget.__
 
-+ Beveger utforskeren din seg fortsatt rundt slik den gjorde
+- [ ] Beveger utforskeren din seg fortsatt rundt slik den gjorde
   tidligere?
 
-+ Forandrer hastigheten til utforskeren seg hvis du endrer verdien av
+- [ ] Forandrer hastigheten til utforskeren seg hvis du endrer verdien av
   `(hastighet)`{.b} og klikker på det grønne flagget igjen?
 
-+ Velg en hastighet du synes passer.
+- [ ] Velg en hastighet du synes passer.
+
 
 # Steg 2: Vi tegner vår egen labyrint {.activity}
 
@@ -145,18 +149,18 @@ __Klikk på det grønne flagget.__
 
 ## Sjekkliste {.check}
 
-+ Velg ![Tegn ny bakgrunn](../bilder/tegn-ny.png) nederst til
+- [ ] Velg ![Tegn ny bakgrunn](../bilder/tegn-ny.png) nederst til
   venstre på skjermen for å tegne en ny bakgrunn. Pass på at du
   faktisk tegner en ny __bakgrunn__, og ikke en ny figur.
 
-+ Gi den nye bakgrunnen navnet `Labyrint`.
+- [ ] Gi den nye bakgrunnen navnet `Labyrint`.
 
-+ Velg en farge du liker og tegn en liten labyrint. Det er viktig at
+- [ ] Velg en farge du liker og tegn en liten labyrint. Det er viktig at
   alle veggene i labyrinten har samme farge (vi oppdager hvorfor
   snart). Du kan velge selv hvordan labyrinten skal se ut, den trenger
   ikke en gang å ha rette vegger!
 
-  ![](liten-labyrint.png)
+  ![Bilde av en enkel liten labyring](liten-labyrint.png)
 
   Dette er et eksempel på en liten og enkel labyrint. Du kan selv
   velge hvordan din labyrint skal se ut! Men ikke bruk for lang tid
@@ -174,12 +178,13 @@ tillegg holde inne `shift`-knappen for at linjene skal bli helt rette.
 
 __Klikk på det grønne flagget.__
 
-+ Kan du bevege utforskerfiguren din rundt inne i labyrinten?
+- [ ] Kan du bevege utforskerfiguren din rundt inne i labyrinten?
 
-+ Dersom figuren din er for stor kan du gjøre den mindre ved å trykke
+- [ ] Dersom figuren din er for stor kan du gjøre den mindre ved å trykke
   på ![krymp](../bilder/krymp.png)-knappen på toppen av skjermen.
 
-+ Hva skjer dersom figuren din går på veggen i labyrinten?
+- [ ] Hva skjer dersom figuren din går på veggen i labyrinten?
+
 
 # Steg 3: Utforskeren kan ikke gå gjennom veggen {.activity}
 
@@ -195,7 +200,7 @@ Denne klossen merker om en figur kommer borti en spesiell farge.  Her
 er det viktig at vi har tegnet alle veggene i labyrinten i samme
 farge.
 
-+ Vi legger `<berører fargen [#ffffff]>`{.b}-klossen inn i skriptet vi
+- [ ] Vi legger `<berører fargen [#ffffff]>`{.b}-klossen inn i skriptet vi
   allerede har laget som setter `(hastighet)`{.b}-variabelen.
 
   ```blocks
@@ -210,7 +215,7 @@ farge.
   slutt
   ```
 
-+ For å få riktig farge i `berører fargen [#cc0000]`{.b}-klossen klikker du
+- [ ] For å få riktig farge i `berører fargen [#cc0000]`{.b}-klossen klikker du
   først på den lille firkanten hvor fargen vises. Deretter flytter du
   musepekeren slik at den peker på en vegg i labyrinten din. Da forandres fargen
   i den lille firkanten. Klikk igjen for å velge denne fargen.
@@ -219,9 +224,9 @@ farge.
 
 __Klikk på det grønne flagget.__
 
-+ Blir utforskeren stoppet når hun prøver å gå gjennom veggen?
+- [ ] Blir utforskeren stoppet når hun prøver å gå gjennom veggen?
 
-+ Skjønner du hvordan skriptet sier at utforskeren ikke kan gå gjennom
+- [ ] Skjønner du hvordan skriptet sier at utforskeren ikke kan gå gjennom
   veggen?
 
 ## Tips {.protip}
@@ -239,6 +244,7 @@ vil figuren først snu seg helt rundt (180 grader), deretter ta et
 skritt, og til slutt snu seg rundt igjen slik at den peker i samme
 retning som da den startet.
 
+
 # Steg 4: På leting etter skatten {.activity}
 
 *Nå kan vi bevege oss rundt i labyrinten. Men det blir jo fort
@@ -247,16 +253,16 @@ retning som da den startet.
 
 ## Sjekkliste {.check}
 
-+ Legg til en ny figur. Du kan velge en figur fra biblioteket ved å
+- [ ] Legg til en ny figur. Du kan velge en figur fra biblioteket ved å
   trykke
   ![Velg figur fra biblioteket](../bilder/hent-fra-bibliotek.png)
   eller tegne en figur selv ved å trykke
   ![Tegn ny figur](../bilder/tegn-ny.png). Vi brukte figuren
   `Ting/Star1`.
 
-+ Gi den nye figuren navnet `Skatt`.
+- [ ] Gi den nye figuren navnet `Skatt`.
 
-+ Dra skatten rundt inne i labyrinten din, og gjem den et sted den er
+- [ ] Dra skatten rundt inne i labyrinten din, og gjem den et sted den er
   vanskelig å komme til.
 
 Vi skal nå lage litt kode som oppdager når utforskeren finner
@@ -269,7 +275,7 @@ I dette tilfellet spiller det liten rolle hva vi velger, men om vi
 tenker oss at vi kanskje vil lage flere skatter senere kan det være
 litt enklere å lage skriptet på `Skatt`.
 
-+ Pass på at figuren `Skatt` er markert, og skriv følgende kode:
+- [ ] Pass på at figuren `Skatt` er markert, og skriv følgende kode:
 
   ```blocks
   når grønt flagg klikkes
@@ -284,9 +290,9 @@ litt enklere å lage skriptet på `Skatt`.
 
 __Klikk på det grønne flagget.__
 
-+ Forsvinner skatten når utforskeren finner fram til den?
+- [ ] Forsvinner skatten når utforskeren finner fram til den?
 
-+ Hva skjer når du prøver å starte spillet på nytt etter å ha funnet
+- [ ] Hva skjer når du prøver å starte spillet på nytt etter å ha funnet
   skatten? Hvor har skatten blitt av?
 
 ## Sjekkliste {.check}
@@ -294,7 +300,7 @@ __Klikk på det grønne flagget.__
 Det er et problem i spillet vårt. Etter at utforskeren har funnet
 skatten en gang, forblir skatten borte.
 
-+ Vi må passe på at skatten vises på begynnelsen av spillet. Endre
+- [ ] Vi må passe på at skatten vises på begynnelsen av spillet. Endre
   skriptet på `Skatt` ved å legge til `vis`{.b} helt i begynnelsen.
 
   ```blocks
@@ -311,18 +317,18 @@ Vi har enda et problem: Når vi starter spillet på nytt står
 utforskeren fortsatt der den fant skatten sist. Det blir ikke veldig
 spennende.
 
-+ Klikk på `Utforsker`-figuren.
+- [ ] Klikk på `Utforsker`-figuren.
 
-+ Legg til en `gå til x: () y: ()`{.b}-kloss rett etter `sett
+- [ ] Legg til en `gå til x: () y: ()`{.b}-kloss rett etter `sett
   [hastighet v] til (10)`{.b}-klossen.
 
-+ For å finne ut hvilke tall vi vil bruke for `x` og `y` kan vi gjøre
+- [ ] For å finne ut hvilke tall vi vil bruke for `x` og `y` kan vi gjøre
   følgende. Dra utforskeren til et sted det er fint å starte fra. Se
   øverst i høyre hjørne. Sammen med `Utforsker`-figuren står det `x`
   og `y` og to tall. Dette er posisjonen til figuren akkurat nå. Skriv
   disse to tallene inn i `gå til x: () y: ()`{.b}-klossen.
 
-+ Hele skriptet vil nå se slik ut (dine tall for `x` og `y` vil være
+- [ ] Hele skriptet vil nå se slik ut (dine tall for `x` og `y` vil være
   forskjellige):
 
   ```blocks
@@ -342,10 +348,11 @@ spennende.
 
 __Klikk på det grønne flagget.__
 
-+ Forsvinner fortsatt skatten når utforskeren finner fram til den?
+- [ ] Forsvinner fortsatt skatten når utforskeren finner fram til den?
 
-+ Virker spillet slik det skal når du starter det på nytt etter å ha
+- [ ] Virker spillet slik det skal når du starter det på nytt etter å ha
   funnet skatten?
+
 
 # Steg 5: Froskekongen vokter i gangene {.activity}
 
@@ -354,16 +361,16 @@ __Klikk på det grønne flagget.__
 
 ## Sjekkliste {.check}
 
-+ Legg til en ny figur. Vi brukte `Dyr/Frog`. Gi den navnet
+- [ ] Legg til en ny figur. Vi brukte `Dyr/Frog`. Gi den navnet
   `Froskekonge`.
 
-+ Plasser den nye figuren et sted i labyrinten. Gjør den mindre eller
+- [ ] Plasser den nye figuren et sted i labyrinten. Gjør den mindre eller
   større om nødvendig.
 
 Vi begynner med å la `Froskekonge` merke at den fanger utforskeren.
 Dette blir veldig likt hvordan `Skatt` merket at den ble funnet.
 
-+ Legg til følgende kode:
+- [ ] Legg til følgende kode:
 
   ```blocks
   når grønt flagg klikkes
@@ -383,16 +390,16 @@ at vi har blitt tatt av `Froskekonge`.
 
 __Klikk på det grønne flagget.__
 
-+ Hva skjer om utforskeren kommer borti froskekongen?
+- [ ] Hva skjer om utforskeren kommer borti froskekongen?
 
-+ Hva skjer når du finner skatten etter å ha blitt tatt av
+- [ ] Hva skjer når du finner skatten etter å ha blitt tatt av
   froskekongen?
 
 ## Sjekkliste {.check}
 
 Til sist skal vi få froskekongen til å bevege seg rundt i labyrinten.
 
-+ Start et nytt skript på `Froskekonge`-figuren. Igjen kan du bytte ut
+- [ ] Start et nytt skript på `Froskekonge`-figuren. Igjen kan du bytte ut
   tallene for `x` og `y` med noe som passer for din labyrint.
 
   ```blocks
@@ -401,13 +408,13 @@ Til sist skal vi få froskekongen til å bevege seg rundt i labyrinten.
   pek i retning (-90 v)
   ```
 
-+ Før vi lar `Froskekonge` begynne å bevege seg lager vi en
+- [ ] Før vi lar `Froskekonge` begynne å bevege seg lager vi en
   `(hastighet)`{.b}-variabel også for ham. Klikk på
   `Data`{.blockdata}, og deretter `Lag en Variabel`. Kall variabelen
   `hastighet` og la den gjelde kun `For denne figuren`. Tilslutt,
   fjern avhukingen på variabelen.
 
-+ Vi kan nå utvide skriptet slik at froskekongen går fram og
+- [ ] Vi kan nå utvide skriptet slik at froskekongen går fram og
   tilbake. Vi får ham til å snu når han treffer veggen på nesten samme
   måte som vi hindrer utforskeren i å gå gjennom veggen.
 
@@ -428,7 +435,7 @@ Til sist skal vi få froskekongen til å bevege seg rundt i labyrinten.
 Helt tilslutt kan vi gjøre det enda vanskeligere ved å la froskekongen
 av og til endre retning.
 
-+ Legg til kode som lar `Froskekonge` snu seg tilfeldig rundt i labyrinten:
+- [ ] Legg til kode som lar `Froskekonge` snu seg tilfeldig rundt i labyrinten:
 
   ```blocks
   når grønt flagg klikkes
@@ -449,10 +456,10 @@ av og til endre retning.
 
 Disse to siste klossene ser litt kompliserte ut. La oss se litt nøyere på dem.
 
-+ Klossen `hvis <(tilfeldig tall fra (1) til (25)) = [1]>`{.b} sier at
+- [ ] Klossen `hvis <(tilfeldig tall fra (1) til (25)) = [1]>`{.b} sier at
   vi skal gjøre *noe* cirka èn av 25 ganger.
 
-+ Dette *noe* er `vend høyre ((tilfeldig tall fra (-1) til (1)) *
+- [ ] Dette *noe* er `vend høyre ((tilfeldig tall fra (-1) til (1)) *
   (90)) grader`{.b}. Tegnet `*` betyr gange, slik at om vi velger
   tilfeldig mellom tallene -1, 0 og 1, betyr det at froskekongen vil
   vende -90, 0 eller 90 grader. Det vil si at den svinger mot venstre,
@@ -472,15 +479,15 @@ til `Froskekonge` om du bruker `Dyr/Frog`-figuren).
 
 __Klikk på det grønne flagget.__
 
-+ Klarer du å få tak i skatten?
+- [ ] Klarer du å få tak i skatten?
 
-+ Om du synes spillet er for lett eller vanskelig er det mange måter
+- [ ] Om du synes spillet er for lett eller vanskelig er det mange måter
   du kan endre dette på! Prøv å lag froskekongen større eller
   mindre. Prøv å endre hastigheten på både utforskeren og
   froskekongen. Om du endrer tallet 25 i det siste skriptet vi laget
   for `Froskekonge` vil han endre retning oftere eller sjednere.
 
-+ Du kan også prøve å lage flere skatter. Prøv å høyreklikk på
+- [ ] Du kan også prøve å lage flere skatter. Prøv å høyreklikk på
   `Skatt`-figuren og velg `Lag en kopi`.
 
 ## Lagre prosjektet {.save}

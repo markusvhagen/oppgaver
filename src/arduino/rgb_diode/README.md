@@ -1,5 +1,7 @@
 ---
 title: Lærerveiledning - RGB-lysdiode
+author: "Morten Minde Neergaard & Martin Ertsås"
+language: nb
 ---
 
 
@@ -8,7 +10,9 @@ title: Lærerveiledning - RGB-lysdiode
 ## Læringsmål
 
 + `for`- og `while`-løkker
+
 + Styre en RGB-lysdiode
+
 
 # Løsningsforslag for fargekombinasjonssykling {.activity}
 
@@ -46,8 +50,10 @@ void loop() {
 
 ## Kommentar {.protip}
 
-Vi har testet dette med RGB-lysdioden som er med i kodegenet sin pakke. For å kunne se blå og grønn mens rød hadde full
-intensitet måtte vi skalere intensiteten til rød med 0.7. Det er også grunnen til at vi har skalert grønn med 0.85, denne gangen
-for å kunne se blå.
+Vi har testet dette med RGB-lysdioden som er med i kodegenet sin pakke. For å
+kunne se blå og grønn mens rød hadde full intensitet måtte vi skalere
+intensiteten til rød med 0.7. Det er også grunnen til at vi har skalert grønn
+med 0.85, denne gangen for å kunne se blå.
 
-Skaleringsfaktorene kan variere mellom lysdioder, så hvis disse faktorene ikke fungerer må en prøve seg frem.
+Skaleringsfaktorene kan variere mellom lysdioder, så hvis disse faktorene ikke
+fungerer må en prøve seg frem.

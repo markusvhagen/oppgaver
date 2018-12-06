@@ -1,34 +1,57 @@
 ---
 title: "JS: Trykkomania"
-level: 2
 author: Arve Seljebu
+language: nb
 ---
 
+
 # Introduksjon {.intro}
-Denne oppgaven viser deg hvordan du kan lage et spill med JavaScript og dele det med vennene dine. Spillet kalles *Trykkomania* fordi det handler om å trykke på en ball flest mulig ganger før tiden renner ut.
 
-Før du starter på denne oppgaven bør du har endel erfaring med variabler, funksjoner og eventListeners i JavaScript. Dersom du ikke har det, så anbefaler vi å gjøre noen av de enklere oppgavene først. 
+Denne oppgaven viser deg hvordan du kan lage et spill med JavaScript og dele det
+med vennene dine. Spillet kalles *Trykkomania* fordi det handler om å trykke på
+en ball flest mulig ganger før tiden renner ut.
 
-![](trykkomania.gif)
+Før du starter på denne oppgaven bør du har endel erfaring med variabler,
+funksjoner og eventListeners i JavaScript. Dersom du ikke har det, så anbefaler
+vi å gjøre noen av de enklere oppgavene først.
+
+![Animasjon av spillet trykkomania](trykkomania.gif)
+
 
 # Steg 1: Åpne JS Bin {.activity}
-Vi skal bruke JS Bin (http://jsbin.com) for å lage spillet. Hvis du aldri har brukt JS Bin før, ta en titt på oppgaven [Hei JavaScript](../hei_js/hei_js.html). Dersom du heller vil lage spillet i en egen fil på PCen din, så er det bare å åpne din favoritt teksteditor og hoppe til steg 2.
+
+Vi skal bruke JS Bin (http://jsbin.com) for å lage spillet. Hvis du aldri har
+brukt JS Bin før, ta en titt på oppgaven [Hei
+JavaScript](../hei_js/hei_js.html). Dersom du heller vil lage spillet i en egen
+fil på PCen din, så er det bare å åpne din favoritt teksteditor og hoppe til
+steg 2.
 
 ## Sjekkliste {.check}
-- Åpne adressen [jsbin.com](http://jsbin.com) i ett eget vindu.
-- Velg å vise **JavaScript** og **Output**. Skjul de andre fanene ved å trykke på de.
 
-  ![](faner.png)
+- [ ] Åpne adressen [jsbin.com](http://jsbin.com) i ett eget vindu
 
-- I **JavaScript** skriver vi koden.
-- I **Output** vises websiden.
-- Når du starter er begge fanene tomme.
+- [ ] Velg å vise **JavaScript** og **Output**. Skjul de andre fanene ved å
+  trykke på de.
+
+  ![Bilde av jsbin med fanene Javascript og Output](faner.png)
+
+- [ ] I **JavaScript** skriver vi koden
+
+- [ ] I **Output** vises websiden
+
+- [ ] Når du starter er begge fanene tomme.
+
 
 # Steg 2: Lage en ball {.activity}
-Vi skal bruke JavaScript til å lage innholdet på websiden. Dette betyr at vi skal bruke JavaScript til å lage *HTML*. Du trenger ikke kunne noe spesielt om HTML, men om du ønsker lære om HTML, se [oppgaven Introduksjon til web](../introduksjon_til_web/introduksjon_til_web.html).
+
+Vi skal bruke JavaScript til å lage innholdet på websiden. Dette betyr at vi
+skal bruke JavaScript til å lage *HTML*. Du trenger ikke kunne noe spesielt om
+HTML, men om du ønsker lære om HTML, se [oppgaven Introduksjon til
+web](../introduksjon_til_web/introduksjon_til_web.html).
 
 ## Sjekkliste {.check}
-- Vi begynner med å lage en funksjon som heter `Ball`:
+
+- [ ] Vi begynner med å lage en funksjon som heter `Ball`:
 
   ```js
   function Ball() {
@@ -36,7 +59,7 @@ Vi skal bruke JavaScript til å lage innholdet på websiden. Dette betyr at vi s
   }
   ```
 
-- Inni funksjonen lager vi ett nytt `div`-element:
+- [ ] Inni funksjonen lager vi ett nytt `div`-element:
 
   ```js
   function Ball() {
@@ -44,8 +67,9 @@ Vi skal bruke JavaScript til å lage innholdet på websiden. Dette betyr at vi s
   }
   ```
 
-- `var el` betyr at elementet får navn `el`.
-- Vi kan nå gi elementet en stil:
+- [ ] `var el` betyr at elementet får navn `el`
+
+- [ ] Vi kan nå gi elementet en stil:
 
   ```js
   function Ball() {
@@ -56,10 +80,14 @@ Vi skal bruke JavaScript til å lage innholdet på websiden. Dette betyr at vi s
   }
   ```
 
-- `el.style.backgroundColor = 'black'` gjør ballen svart.
-- `el.style.width = '60px'` gjør ballen 60 [piksler](https://no.wikipedia.org/wiki/Piksel) bred.
-- `el.style.height = '60px'` gjør ballen 60 piksler høy.
-- La oss legge ballen til siden:
+- [ ] `el.style.backgroundColor = 'black'` gjør ballen svart
+
+- [ ] `el.style.width = '60px'` gjør ballen 60
+  [piksler](https://no.wikipedia.org/wiki/Piksel) bred
+
+- [ ] `el.style.height = '60px'` gjør ballen 60 piksler høy
+
+- [ ] La oss legge ballen til siden:
 
   ```js
   function Ball() {
@@ -71,62 +99,84 @@ Vi skal bruke JavaScript til å lage innholdet på websiden. Dette betyr at vi s
   }
   ```
 
-- For at ballen skal vises, må vi kjøre funksjonen ved hjelp av denne koden:
+- [ ] For at ballen skal vises, må vi kjøre funksjonen ved hjelp av denne koden:
 
   ```js
   Ball();
   ```
 
-- Vises en "ball" i **Output**?
+- [ ] Vises en "ball" i **Output**?
 
-  ![](firkantet_ball.png)
+  ![Bilde av en firkanten ball i output](firkantet_ball.png)
 
-Ok, så den var ikke akkurat rund. Vi kan bruke `el.style.borderRadius` for å runde av hjørnene. Siden ballen er `60px` bred og høy, så avrunder vi kantene med `30px`, altså halvparten av 60.
-- Legg koden under de andre `el.style`-setningene:
+Ok, så den var ikke akkurat rund. Vi kan bruke `el.style.borderRadius` for å
+runde av hjørnene. Siden ballen er `60px` bred og høy, så avrunder vi kantene
+med `30px`, altså halvparten av 60
+
+- [ ] Legg koden under de andre `el.style`-setningene:
 
   ```js
   el.style.borderRadius = '30px';
   ```
 
-- Fikk du en rund ball?
+- [ ] Fikk du en rund ball?
 
 ## Utforsk {.challenge}
-Om du ønsker en annen form, prøv andre verdier enn `30px` for avrundingen. Hvordan ser `5px` ut?
+
+Om du ønsker en annen form, prøv andre verdier enn `30px` for avrundingen.
+Hvordan ser `5px` ut?
 
 ## Tips {.protip}
-Om du sitter fast, kan du se på [fasiten så langt](http://jsbin.com/pozova/1/edit?js,output).
+
+Om du sitter fast, kan du se på [fasiten så
+langt](http://jsbin.com/pozova/1/edit?js,output).
+
 
 # Steg 3: Flytte ballen {.activity}
-Akkurat nå vises ballen helt øverst til venstre i **Output**. La oss flytte den rundt omkring.
 
-Vi bruker `el.style.position = 'fixed'` for å fortelle at vi ønsker plassere ballen i forhold til kantene i vinduet. 50% fra toppen blir da `el.style.top = '50%'`.
+Akkurat nå vises ballen helt øverst til venstre i **Output**. La oss flytte den
+rundt omkring.
+
+Vi bruker `el.style.position = 'fixed'` for å fortelle at vi ønsker plassere
+ballen i forhold til kantene i vinduet. 50% fra toppen blir da `el.style.top =
+'50%'`.
 
 ## Sjekkliste {.check}
-- Legg til en posisjon for ballen:
+
+- [ ] Legg til en posisjon for ballen:
 
   ```js
   el.style.position = 'fixed';
   el.style.top = '80%';
   ```
 
-- Flyttet ballen seg ned?
-- Flytt ballen ut fra venstre kant:
+- [ ] Flyttet ballen seg ned
+
+- [ ] Flytt ballen ut fra venstre kant:
 
   ```js
   el.style.left = '30%';
   ```
 
-- Prøv andre verdier mellom `0%` og `100%`.
-- Klarer du å finne ut når ballen forsvinner ut av vinduet?
+- [ ] Prøv andre verdier mellom `0%` og `100%`
+
+- [ ] Klarer du å finne ut når ballen forsvinner ut av vinduet?
 
 ## Tips {.protip}
-Om du sitter fast, kan du se på [fasiten så langt](http://jsbin.com/pozova/2/edit?js,output).
+
+Om du sitter fast, kan du se på [fasiten så
+langt](http://jsbin.com/pozova/2/edit?js,output).
+
 
 # Steg 4: Flytte ballen med en funksjon {.activity}
-Ettersom vi ønsker at ballen skal flytte seg underveis i spillet, skal vi lage en funksjon som flytter ballen.
+
+Ettersom vi ønsker at ballen skal flytte seg underveis i spillet, skal vi lage
+en funksjon som flytter ballen.
 
 ## Sjekkliste {.check}
-- Inni `Ball`, lag en funksjon som heter `el.posisjon`. Denne funksjonen skal ta inn en x- og en y-verdi, plassere elementet og returnere elementet.
+
+- [ ] Inni `Ball`, lag en funksjon som heter `el.posisjon`. Denne funksjonen
+  skal ta inn en x- og en y-verdi, plassere elementet og returnere elementet.
 
   ```js
   function Ball() {
@@ -137,16 +187,17 @@ Ettersom vi ønsker at ballen skal flytte seg underveis i spillet, skal vi lage 
   }
   ```
 
-- Funksjonen skal bestemme `el.style.top` og `el.style.left`.
+- [ ] Funksjonen skal bestemme `el.style.top` og `el.style.left`.
 
-   ```js
+  ```js
    el.posisjon = function (x, y) {
      el.style.left = x;
      el.style.top = y;
    };
-   ```
+  ```
 
-- Returner `el`, slik at vi kan bruke funksjonene til ballen. Når elementet `el` returneres så vil `el` oppdateres med ny plassering. 
+- [ ] Returner `el`, slik at vi kan bruke funksjonene til ballen. Når elementet
+  `el` returneres så vil `el` oppdateres med ny plassering.
 
   ```js
   function Ball() {
@@ -160,7 +211,7 @@ Ettersom vi ønsker at ballen skal flytte seg underveis i spillet, skal vi lage 
   }
   ```
 
-- Du kan nå flytte ballen slik som dette:
+- [ ] Du kan nå flytte ballen slik som dette:
 
   ```js
   var ball = Ball();  // lager ballen
@@ -168,64 +219,93 @@ Ettersom vi ønsker at ballen skal flytte seg underveis i spillet, skal vi lage 
   ```
 
 ## Tips {.protip}
-Om du sitter fast, kan du se på [fasiten så langt](http://jsbin.com/hipepuy/edit?js,output).
+
+Om du sitter fast, kan du se på [fasiten så
+langt](http://jsbin.com/hipepuy/edit?js,output).
+
 
 # Steg 5: Velg en tilfeldig plassering {.activity}
-I JavaScript kan vi bruke `Math.random()` for å få en tilfeldig verdi mellom 0 og 1. La oss bruke denne slik at ballen blir plassert på et tilfeldig sted.
+
+I JavaScript kan vi bruke `Math.random()` for å få en tilfeldig verdi mellom 0
+og 1. La oss bruke denne slik at ballen blir plassert på et tilfeldig sted.
 
 ## Sjekkliste {.check}
-- Trykk på fanen **Console**.
-- Skriv inn `Math.random()` og trykk enter.
 
-  ![](tilfeldig.png)
+- [ ] Trykk på fanen **Console**
 
-- Fikk du et tall mellom 0 og 1?
-- Vi kan gjøre dette tallet om til prosent ved å gange med 100, prøv det ut:
+- [ ] Skriv inn `Math.random()` og trykk enter.
 
-  ![](prosent1.png)
+  ![Bilde av outputt fra å skrive "Math.random()"](tilfeldig.png)
 
-- Vi kan legge til prosenttegnet med `+ '%'`:
+- [ ] Fikk du et tall mellom 0 og 1
 
-  ![](prosent2.png)
+- [ ] Vi kan gjøre dette tallet om til prosent ved å gange med 100, prøv det ut:
 
-- Legg merke til at hver gang kommandoen kjøres, får vi nye tall. Det er dette som kalles *tilfeldig*.
-- Lukk **Console** ved å trykke på den.
-- La oss bruke `Math.random` til å plassere ballen:
+  ![Bilde av outputt som er ganget med 100](prosent1.png)
+
+- [ ] Vi kan legge til prosenttegnet med `+ '%'`:
+
+  ![Bilde av outputt i prosent](prosent2.png)
+
+- [ ] Legg merke til at hver gang kommandoen kjøres, får vi nye tall. Det er
+  dette som kalles *tilfeldig*
+
+- [ ] Lukk **Console** ved å trykke på den
+
+- [ ] La oss bruke `Math.random` til å plassere ballen:
 
   ```js
   var x = Math.random() * 100 + '%';
   var y = Math.random() * 100 + '%';
   ball.posisjon(x, y);
   ```
-Her har vi laget 2 variabler `x` og `y` som begge holder på hvert sitt tilfeldige tall. Dette tallet sendes inn i funksjonen `posisjon(x,y)` som vi lagde i sted. 
 
-- Hvis du trykker på knappen <button>Run with JS</button>, flytter ballen på seg?
+Her har vi laget 2 variabler `x` og `y` som begge holder på hvert sitt
+tilfeldige tall. Dette tallet sendes inn i funksjonen `posisjon(x,y)` som vi
+lagde i sted.
 
-  ![](tilfeldig_plassering.gif)
+- [ ] Hvis du trykker på knappen <button>Run with JS</button>, flytter ballen på
+  seg?
 
-- Hvis du har haket av **Auto-run JS** vil også koden kjøres hver gang du endrer koden.
-- Trykker du nok antall ganger, legger du merke til at ballen noen ganger kommer utenfor bunnen og høyre side.
-- For å unngå dette kan vi begrense forflytningen til 80%:
+  ![Bildet av ballen som får en ny tilfeldig
+  plassering](tilfeldig_plassering.gif)
+
+- [ ] Hvis du har haket av **Auto-run JS** vil også koden kjøres hver gang du
+  endrer koden
+
+- [ ] Trykker du nok antall ganger, legger du merke til at ballen noen ganger
+  kommer utenfor bunnen og høyre side
+
+- [ ] For å unngå dette kan vi begrense forflytningen til 80%:
 
   ```js
   var x = Math.random() * 80 + '%';
   var y = Math.random() * 80 + '%';
   ```
 
-- Siden `Math.random()` maksimalt er 1 og vi ganger med 80, vil aldri ballen flytte seg lenger ut fra toppen eller venstre side enn 80%.
+- [ ] Siden `Math.random()` maksimalt er 1 og vi ganger med 80, vil aldri ballen
+  flytte seg lenger ut fra toppen eller venstre side enn 80%.
 
 ## Tips {.protip}
-Om du sitter fast, kan du se på [fasiten så langt](http://jsbin.com/digiqa/1/edit?js,output).
+
+Om du sitter fast, kan du se på [fasiten så
+langt](http://jsbin.com/digiqa/1/edit?js,output).
+
 
 # Steg 6: Flytte ballen hvert andre sekund {.activity}
-Vi ønsker at ballen hele tiden skal flytte seg. Nå skal vi bruke `setInterval` til å flytte ballen hvert andre sekund.
+
+Vi ønsker at ballen hele tiden skal flytte seg. Nå skal vi bruke `setInterval`
+til å flytte ballen hvert andre sekund.
+
 ```js
 setInterval(function(){
     //koden som skal kjøres i intervall
 }, antall_millisekunder); // Hvor ofte den skal kjøre
 ```
+
 ## Sjekkliste {.check}
-- Bruk `setInterval` til å flytte ballen hvert andre sekund:
+
+- [ ] Bruk `setInterval` til å flytte ballen hvert andre sekund:
 
   ```js
   setInterval(function () {
@@ -235,17 +315,27 @@ setInterval(function(){
   }, 2000);
   ```
 
-- `setInterval(function ..., 2000)` betyr kjør `function` hvert `2000` millisekund.
-- 2000 millisekund er 2 sekunder, altså tegnes ballen på et nytt sted hvert andre sekund.
+- [x] `setInterval(function ..., 2000)` betyr kjør `function` hvert `2000`
+  millisekund
+
+- [ ] 2000 millisekund er 2 sekunder, altså tegnes ballen på et nytt sted hvert
+  andre sekund.
 
 ## Tips {.protip}
-Om du sitter fast, kan du se på [fasiten så langt](http://jsbin.com/lecamej/1/edit?js,output).
+
+Om du sitter fast, kan du se på [fasiten så
+langt](http://jsbin.com/lecamej/1/edit?js,output).
+
 
 # Steg 7: Poeng {.activity}
-Nå har du en ball som spretter rundt. La oss legge til poeng. Vi har laget en poeng-komponent som du kan bruke, så kommer du raskere i gang. `Poeng` er bygd opp likt som `Ball`, så du må gjerne lese gjennom og se om du forstår den.
+
+Nå har du en ball som spretter rundt. La oss legge til poeng. Vi har laget en
+poeng-komponent som du kan bruke, så kommer du raskere i gang. `Poeng` er bygd
+opp likt som `Ball`, så du må gjerne lese gjennom og se om du forstår den.
 
 ## Sjekkliste {.check}
-- Legg til koden for komponenten `Poeng`:
+
+- [ ] Legg til koden for komponenten `Poeng`:
 
   ```js
   /**
@@ -259,7 +349,7 @@ Nå har du en ball som spretter rundt. La oss legge til poeng. Vi har laget en p
    */
   function Poeng() {
     var el = document.createElement('div');
-    
+
     // CSS til "el"
     el.style.position = 'fixed';
     el.style.bottom = '5px';
@@ -267,7 +357,7 @@ Nå har du en ball som spretter rundt. La oss legge til poeng. Vi har laget en p
     el.style.padding = '5px';
     el.style.backgroundColor = 'black';
     el.style.color = 'white';
-    
+
     // Viser poengsum på skjermen, samt lager variabelen "_poeng"
     var _poeng = 0;
     el.innerHTML = _poeng + ' poeng';
@@ -287,16 +377,21 @@ Nå har du en ball som spretter rundt. La oss legge til poeng. Vi har laget en p
   }
   ```
 
-- For at poengsummen skal vises, må vi kjøre `Poeng()` en gang, slik vi også gjorde med `Ball()`.
-- Legg denne linjen over `Ball()`:
+- [ ] For at poengsummen skal vises, må vi kjøre `Poeng()` en gang, slik vi også
+  gjorde med `Ball()`
+
+- [ ] Legg denne linjen over `Ball()`:
 
   ```js
   var poeng = Poeng();
   var ball = Ball();
   ```
 
-- Vises "**Poeng 0**"?
-- For å holde orden på programmet er det lurt å ha det som skjer i toppen. Funksjoner kan brukes likevel om de ikke står først, så flytt `function Ball` og `function Poeng` ned til bunnen.
+- [ ] Vises "**Poeng 0**"
+
+- [ ] For å holde orden på programmet er det lurt å ha det som skjer i toppen.
+  Funksjoner kan brukes likevel om de ikke står først, så flytt `function Ball`
+  og `function Poeng` ned til bunnen.
 
   ```js
   var poeng = Poeng();
@@ -315,53 +410,79 @@ Nå har du en ball som spretter rundt. La oss legge til poeng. Vi har laget en p
   }
   ```
 
-- Nå står det som skjer i toppen:
+- [ ] Nå står det som skjer i toppen:
+
   - Vis poengene: `var poeng = Poeng()`
+
   - Vis ballen: `var ball = Ball()`
-  - Flytt ballen hvert andre sekund: `setInterval(..., 2000)`
-- Vi velger nå å kjøre funksjonen `poeng.øk` hver gang ballen trykkes.
+
+  - Flytt ballen hvert andre sekund: `setInterval(..., 2000)
+
+- [ ] Vi velger nå å kjøre funksjonen `poeng.øk` hver gang ballen trykkes.
 
   ```js
   ball.onclick = poeng.øk;
   ```
-  **Obs:** Det skal **ikke** være `()` på slutten av `poeng.øk`. Dette er fordi funksjonen ikke kjøres her, men hver gang noen klikker på ballen.
 
-- `ball.onclick = poeng.øk;` betyr at funksjonen `poeng.øk()` kjøres når noen klikker på ballen.
-- Sjekk at du får poeng når du treffer ballen med et klikk.
+  **Obs:** Det skal **ikke** være `()` på slutten av `poeng.øk`. Dette er fordi
+  funksjonen ikke kjøres her, men hver gang noen klikker på ballen.
 
-  ![](poeng.gif)
+- [ ] `ball.onclick = poeng.øk;` betyr at funksjonen `poeng.øk()` kjøres når
+  noen klikker på ballen
+
+- [ ] Sjekk at du får poeng når du treffer ballen med et klikk.
+
+  ![Animasjon av at du får poeng når du treffer ballen med et klikk](poeng.gif)
 
 ## Tips {.protip}
-Om du sitter fast, kan du se på [fasiten så langt](http://jsbin.com/mewole/1/edit?js,output).
+
+Om du sitter fast, kan du se på [fasiten så
+langt](http://jsbin.com/mewole/1/edit?js,output).
 
 ## Teste spillet {.flag}
-Du er nå kommet så langt at det kan være kult å teste spillet. Ettersom spillet handler om å trykke flest mulig ganger på ballen, egner det seg for å prøve på mobiltelefonen.
+
+Du er nå kommet så langt at det kan være kult å teste spillet. Ettersom spillet
+handler om å trykke flest mulig ganger på ballen, egner det seg for å prøve på
+mobiltelefonen.
 
 ## Sjekkliste {.check}
-- Noen mobiltelefoner zoomer når en dobbeltklikker på skjermen, derfor skal vi slå av zooming.
-- Åpne fanen **HTML** ved å trykke på den.
-- Finn linjen med `<meta name="viewport" ...`.
-- Endre linjen til:
+
+- [ ] Noen mobiltelefoner zoomer når en dobbeltklikker på skjermen, derfor skal
+  vi slå av zooming
+
+- [ ] Åpne fanen **HTML** ved å trykke på den
+
+- [ ] Finn linjen med `<meta name="viewport" ...`
+
+- [ ] Endre linjen til:
 
   ```html
   <meta name="viewport" content="width=device-width, user-scalable=no">
   ```
 
-- Lukk fanen **HTML** ved å trykke på den.
-- Øverst i nettleseren din står adressen til siden.
+- [ ] Lukk fanen **HTML** ved å trykke på den
 
-  ![](adresse.png)
+- [ ] Øverst i nettleseren din står adressen til siden.
 
-- Adressen du trenger å taste inn på mobilen er det *før* `/edit?js,output`.
-- I eksempelet over er adressen `jsbin.com/dutebe`.
-- Tast *din* adresse inn på mobiltelefonen.
-- Spill!
+  ![Bilde av adressen til siden øverst i nettleseren](adresse.png)
+
+- [ ] Adressen du trenger å taste inn på mobilen er det *før* `/edit?js,output`
+
+- [ ] I eksempelet over er adressen `jsbin.com/dutebe`
+
+- [ ] Tast *din* adresse inn på mobiltelefonen
+
+- [ ] Spill!
+
 
 # Steg 8: Begrense tiden {.activity}
-Akkurat nå er det ubegrenset tid i spillet. La oss legge til en nedtelling av tid, slik at man kan konkurrere om hvem som klarer flest klikk på 10 sekunder.
+
+Akkurat nå er det ubegrenset tid i spillet. La oss legge til en nedtelling av
+tid, slik at man kan konkurrere om hvem som klarer flest klikk på 10 sekunder.
 
 ## Sjekkliste {.check}
-- Legg til koden for nedtelling i bunnen av programmet.
+
+- [ ] Legg til koden for nedtelling i bunnen av programmet.
 
   ```js
   /**
@@ -374,7 +495,7 @@ Akkurat nå er det ubegrenset tid i spillet. La oss legge til en nedtelling av t
    */
   function Nedtelling (ferdig) {
     var el = document.createElement('div');
-    
+
     // CSSen til elementet "el"
     el.style.position = 'fixed';
     el.style.left = '0';
@@ -388,12 +509,12 @@ Akkurat nå er det ubegrenset tid i spillet. La oss legge til en nedtelling av t
     function prosent (slutt, tid) {
       return (slutt - Date.now()) / tid / 10;
     }
-    
+
     // Funksjon som teller ned og stopper når den har kommet til null
     el.tellNed = function (tid) {
       var slutt = Date.now() + tid * 1000;
       var intervall = setInterval(tegn, 20);
-      
+
       // Tegner streken på venstre side til tiden er ute
       function tegn () {
         var p = prosent(slutt, tid);
@@ -410,16 +531,19 @@ Akkurat nå er det ubegrenset tid i spillet. La oss legge til en nedtelling av t
   }
   ```
 
-- I toppen starter vi nedtellingen.
+- [ ] I toppen starter vi nedtellingen.
 
   ```js
   var nedtelling = Nedtelling();
   nedtelling.tellNed(10);
   ```
 
-- Dette lager en nedtelling på 10 sekunder.
-- Hvis du trykker på <button>Run with JS</button> ser du nedtellingen, men ingenting skjer når tiden er ute.
-- Lag funksjonen `stopp` som forteller hva som skal skje når tiden er ute.
+- [ ] Dette lager en nedtelling på 10 sekunder
+
+- [ ] Hvis du trykker på <button>Run with JS</button> ser du nedtellingen, men
+  ingenting skjer når tiden er ute
+
+- [ ] Lag funksjonen `stopp` som forteller hva som skal skje når tiden er ute.
 
   ```js
   function stopp() {
@@ -427,8 +551,9 @@ Akkurat nå er det ubegrenset tid i spillet. La oss legge til en nedtelling av t
   }
   ```
 
-- Vi har ikke laget funksjonen `ball.skjul` enda. Vi trenger `ball.vis` også.
-- Lag `ball.skjul` og `ball.vis` inni `function Ball`.
+- [ ] Vi har ikke laget funksjonen `ball.skjul` enda. Vi trenger `ball.vis` også
+
+- [ ] Lag `ball.skjul` og `ball.vis` inni `function Ball`.
 
   ```js
   function Ball() {
@@ -444,23 +569,31 @@ Akkurat nå er det ubegrenset tid i spillet. La oss legge til en nedtelling av t
   }
   ```
 
-- Nå kan vi fortelle nedtellingen at den skal kjøre `stopp()` når tiden er ute.
+- [ ] Nå kan vi fortelle nedtellingen at den skal kjøre `stopp()` når tiden er
+  ute.
 
   ```js
   var nedtelling = Nedtelling(stopp);
   ```
 
-- Forsvinner ballen når tiden er ute?
-- Hvor mange poeng klarer du på mobiltelefonen innen tiden?
+- [ ] Forsvinner ballen når tiden er ute
+
+- [ ] Hvor mange poeng klarer du på mobiltelefonen innen tiden?
 
 ## Tips {.protip}
-Om du sitter fast, kan du se på [fasiten så langt](http://jsbin.com/tukiwu/1/edit?js,output).
+
+Om du sitter fast, kan du se på [fasiten så
+langt](http://jsbin.com/tukiwu/1/edit?js,output).
+
 
 # Steg 9: Omstarte spillet {.activity}
-Så langt kan spillet omstartes ved å oppdatere nettleseren. Er det ikke stiligere med en knapp som starter spillet?
+
+Så langt kan spillet omstartes ved å oppdatere nettleseren. Er det ikke
+stiligere med en knapp som starter spillet?
 
 ## Sjekkliste {.check}
-- Lag en funksjon `start`.
+
+- [ ] Lag en funksjon `start`.
 
   ```js
   function start() {
@@ -468,7 +601,8 @@ Så langt kan spillet omstartes ved å oppdatere nettleseren. Er det ikke stilig
   }
   ```
 
-- Funksjonen skal bestemme hva som skjer når spillet skal starte. Vi må nullstille poengsummen, vise nedtellingen og vise ballen.
+- [ ] Funksjonen skal bestemme hva som skjer når spillet skal starte. Vi må
+  nullstille poengsummen, vise nedtellingen og vise ballen.
 
   ```js
   function start() {
@@ -478,8 +612,9 @@ Så langt kan spillet omstartes ved å oppdatere nettleseren. Er det ikke stilig
   }
   ```
 
-- `start` skal kjøres hver gang en knapp klikkes, så vi trenger en knapp.
-- Legg til koden for knappen i bunnen av programmet.
+- [ ] `start` skal kjøres hver gang en knapp klikkes, så vi trenger en knapp
+
+- [ ] Legg til koden for knappen i bunnen av programmet.
 
   ```js
   /**
@@ -518,15 +653,17 @@ Så langt kan spillet omstartes ved å oppdatere nettleseren. Er det ikke stilig
   }
   ```
 
-- I toppen legger vi til knappen.
+- [ ] I toppen legger vi til knappen.
 
   ```js
   var knapp = Knapp('Prøv en gang til');
   knapp.onclick = start;
   ```
 
-- `knapp.onclick` bestemmer hva som skal skje når knappen klikkes.
-- Knappen vises ikke, så vi må bestemme at den skal vises når spillet er slutt.
+- [ ] `knapp.onclick` bestemmer hva som skal skje når knappen klikkes
+
+- [ ] Knappen vises ikke, så vi må bestemme at den skal vises når spillet er
+  slutt.
 
   ```js
   function stopp() {
@@ -535,9 +672,12 @@ Så langt kan spillet omstartes ved å oppdatere nettleseren. Er det ikke stilig
   }
   ```
 
-- Vises knappen når spillet er ferdig?
-- Du legger kanskje merke til at vi har en bug nå? Vi må jo skjule knappen når spillet startes også!
-- Skjul knappen når spillet startes.
+- [ ] Vises knappen når spillet er ferdig
+
+- [ ] Du legger kanskje merke til at vi har en bug nå? Vi må jo skjule knappen
+  når spillet startes også
+
+- [ ] Skjul knappen når spillet startes.
 
   ```js
   function start() {
@@ -546,16 +686,27 @@ Så langt kan spillet omstartes ved å oppdatere nettleseren. Er det ikke stilig
   }
   ```
 
-- Spillet er nå ferdig! Del adressen med dine venner og se hvem som klarer flest poeng.
+- [ ] Spillet er nå ferdig! Del adressen med dine venner og se hvem som klarer
+  flest poeng.
 
 ## Tips {.protip}
-Om du sitter fast, kan du se på [fasiten](http://jsbin.com/pozova/11/edit?js,output).
+
+Om du sitter fast, kan du se på
+[fasiten](http://jsbin.com/pozova/11/edit?js,output).
 
 ## Utfordringer {.challenge}
-Her er noen utfordringer:
-- Endre størrelsen på ballen, slik at spillet blir vanskeligere.
-- Endre hvor lang tid man har på seg.
-- Endre fargen på ballen.
-- Øk poengsummen med 1000 istedenfor 100.
-- Klarer du å få ballen til å endre til forskjellig størrelse hver gang den kommer til syne?
-- Klarer du å få frem flere enn én ball?
+
+Her er noen utfordringer
+
+- [ ] Endre størrelsen på ballen, slik at spillet blir vanskeligere
+
+- [ ] Endre hvor lang tid man har på seg
+
+- [ ] Endre fargen på ballen
+
+- [ ] Øk poengsummen med 1000 istedenfor 100
+
+- [ ] Klarer du å få ballen til å endre til forskjellig størrelse hver gang den
+  kommer til syne
+
+- [ ] Klarer du å få frem flere enn én ball?

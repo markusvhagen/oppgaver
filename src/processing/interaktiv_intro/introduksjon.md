@@ -1,5 +1,5 @@
 ---
 title: Interaktiv introduksjon
-level: 1
-external: http://vestera.as/processing
+language: nb
+external: "http://vestera.as/processing"
 ---
